@@ -21,8 +21,17 @@
                     });
                 }
             }
+            var timezoneOffset = (new Date()).getTimezoneOffset();
+            if ($scope.new_project.active_start_date) {
+                var activeStartDateLocal = moment($scope.new_project.active_start_date).add(-timezoneOffset, 'm').format('YYYY-MM-DD');
+                new_project.active_start_date = activeStartDateLocal;
+            }
+            if ($scope.new_project.active_end_date) {
+                var activeEndDateLocal = moment($scope.new_project.active_end_date).add(-timezoneOffset, 'm').format('YYYY-MM-DD');
+                new_project.active_end_date = activeEndDateLocal;
+            }
 
-            console.log(new_project);
+
 
             $http.post('create/projects/', new_project).then(function(response){
                 $scope.message = "New Project Added";
@@ -30,6 +39,8 @@
             }, function() {
                 console.log('error creating new project');
             });
+
+
         }
 
         function loadLibraryEntries() {

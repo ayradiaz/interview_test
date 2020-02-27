@@ -1,17 +1,17 @@
 (function(){
     'use strict';
 
-    var app = angular.module('ocom.exam', ['ngRoute']);
+    var app = angular.module('ocom.exam', ['ngRoute', 'ngMaterial', 'ngMessages',]);
     app.config(function($routeProvider) {
         $routeProvider
             .when("/", {
-                templateUrl : "/static/js/project-list.html"
+                templateUrl : "/static/html/project-list.html"
             })
             .when("/add", {
-                templateUrl : "/static/js/add-project.html"
+                templateUrl : "/static/html/add-project.html"
             })
             .when("/update", {
-                templateUrl : "/static/js/update-project.html"
+                templateUrl : "/static/html/update-project.html"
             });
     });
 

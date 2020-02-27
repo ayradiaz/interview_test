@@ -23,6 +23,16 @@
 
             console.log(project);
 
+            var timezoneOffset = (new Date()).getTimezoneOffset();
+            if ($scope.project.active_start_date) {
+                var activeStartDateLocal = moment($scope.project.active_start_date).add(-timezoneOffset, 'm').format('YYYY-MM-DD');
+                project.active_start_date = activeStartDateLocal;
+            }
+            if ($scope.project.active_end_date) {
+                var activeEndDateLocal = moment($scope.project.active_end_date).add(-timezoneOffset, 'm').format('YYYY-MM-DD');
+                project.active_end_date = activeEndDateLocal;
+            }
+
             $http.post('/edit/projects/', project).then(function(response){
                 console.log('post here', response);
                 $location.path('/');

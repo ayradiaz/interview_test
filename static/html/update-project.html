@@ -1,7 +1,10 @@
 <div ng-controller="UpdateProjectController">
+    <h2> Update {{ project.name }}</h2>
     <p>Name <input type="text" ng-model="project.name" /></p>
-    <p>Active Start Date: <input type="text" ng-model="project.active_start_date" /></p>
-    <p>Active End Date: <input type="text" ng-model="project.active_end_date" /></p>
+    <p>Active Start Date: </p>
+    <md-datepicker ng-model="project.active_start_date" md-placeholder="Enter date"></md-datepicker>
+    <p>Active End Date: </p>
+        <md-datepicker ng-model="project.active_end_date" md-placeholder="Enter date"></md-datepicker>
     <p>Client Name: <input type="text" ng-model="project.client_name" /></p>
     <p>Description: <input type="text" ng-model="project.description" /></p>
     <p>Git URL: <input type="text" ng-model="project.git_url" /></p>
