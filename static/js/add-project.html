@@ -1,0 +1,16 @@
+<div ng-controller="AddProjectController">
+    <p>Name <input type="text" ng-model="new_project.name" /></p>
+    <p>Active Start Date: <input type="text" ng-model="new_project.active_start_date" /></p>
+    <p>Active End Date: <input type="text" ng-model="new_project.active_end_date" /></p>
+    <p>Client Name: <input type="text" ng-model="new_project.client_name" /></p>
+    <p>Description: <input type="text" ng-model="new_project.description" /></p>
+    <p>Git URL: <input type="text" ng-model="new_project.git_url" /></p>
+    <p>Testing URL: <input type="text" ng-model="new_project.testing_url" /></p>
+    <p>Production URL:  <input type="text" ng-model="new_project.production_url" /></p>
+    <div ng-repeat="entry in libraries">
+        <input type="checkbox" ng-model="entry.checked"> {{entry.library}}
+    </div>
+    <button ng-click="addProject()">Add New Project</button><br />
+    <a ng-href="{{'#!/'}}">Back to Home Page</a>
+    <!-- <pre>{{ new_project }} </pre> -->
+</div>

@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Library, LibraryEntries, Project
+
+admin.site.register(Library)
+admin.site.register(LibraryEntries)
+admin.site.register(Project)

@@ -1,0 +1,18 @@
+<html>
+    {% load static %}
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
+        <script src="{% static 'js/app.js'%}"></script>
+        <script src="{% static 'js/project-list.js' %}"></script>
+        <script src="{% static 'js/add-project.js' %}"></script>
+        <script src="{% static 'js/update-project.js' %}"></script>
+    </head>
+    {% verbatim %}
+    <body ng-app="ocom.exam">
+
+        <ng-view></ng-view>
+
+    </body>
+    {% endverbatim %}
+</html>

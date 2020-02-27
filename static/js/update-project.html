@@ -1,0 +1,15 @@
+<div ng-controller="UpdateProjectController">
+    <p>Name <input type="text" ng-model="project.name" /></p>
+    <p>Active Start Date: <input type="text" ng-model="project.active_start_date" /></p>
+    <p>Active End Date: <input type="text" ng-model="project.active_end_date" /></p>
+    <p>Client Name: <input type="text" ng-model="project.client_name" /></p>
+    <p>Description: <input type="text" ng-model="project.description" /></p>
+    <p>Git URL: <input type="text" ng-model="project.git_url" /></p>
+    <p>Testing URL: <input type="text" ng-model="project.testing_url" /></p>
+    <p>Production URL:  <input type="text" ng-model="project.production_url" /></p>
+    <div ng-repeat="entry in libraries">
+        <input type="checkbox" ng-model="entry.checked"> {{entry.library}} {{ entry.version_number }}
+    </div>
+    <button ng-click="save()">Save</button><br />
+    <a ng-href="{{'#!/'}}">Back to Home Page</a>
+</div>

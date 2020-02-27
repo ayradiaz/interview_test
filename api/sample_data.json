@@ -1,0 +1,12 @@
+{
+  "id":1,
+  "name": "First Project",
+  "active_start_date": "2017-01-01",
+  "active_end_date": null,
+  "description": "A long description of the project and what it does",
+  "client_name": "Ocom software",
+  "git_url": "http://ocomsoft.github.com/someproject.git",
+  "testing_url": "http://testing.atsite.com/",
+  "production_url": null,
+  "libraries": [{"library_id":1,"version": "1.3.3"}, {"library_id": 2,"version": "2a"}]
+}

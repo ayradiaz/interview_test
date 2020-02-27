@@ -1,0 +1,15 @@
+<div ng-controller="ProjectListController">
+    <h2> Available Projects </h2>
+    <div ng-repeat="project in projects">
+        <ul>
+            <li>
+                {{ project.name }}
+                <a ng-href="{{'#!update/?projectId=' + project.id}}">Edit</a>
+                <a href="" ng-click="deleteProject(project.id)">Delete</a>
+            </li>
+        </ul>
+    </div>
+    <a ng-href="{{'#!/add/'}}">Add New Project</a>
+    {{ message }}
+
+</div>
